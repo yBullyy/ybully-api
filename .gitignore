@@ -1,5 +1,6 @@
 venv/
 __pycache__/
-
+cred.json
 *.h5
 *.pickle
+test_data.csv
