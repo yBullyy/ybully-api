@@ -73,7 +73,7 @@ def retrain_model(data,model_version):
     y_test = y_test.reshape(-1, 1)
 
     update_model(model_version,{'status':'Training Started'})
-    lstm_history = model.fit(x_train, y_train, batch_size=512, epochs=1,validation_data=(x_test, y_test))
+    lstm_history = model.fit(x_train, y_train, batch_size=512, epochs=2,validation_data=(x_test, y_test))
 
     update_model(model_version,{'status':'Saving Model'})
     save_path = f"retrain_model/model_{model_version}.h5"
